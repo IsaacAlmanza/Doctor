@@ -1,0 +1,565 @@
+
+
+/* --------------=============== GROBAL ==================--------------*/
+
+@font-face {
+	font-family: 'dido';
+	src: url(fonts/dido-roman-webfont.woff);
+}
+
+@font-face {
+	font-family: 'helvetic_world';
+	src: url(fonts/helveticworld-regular-webfont.woff);
+}
+
+/* =============== COLOR ===============*/
+
+.color-negro{background: #000;}
+
+.color-celeste{color: #00BCD4;}
+
+.white-back {background: #fff;}
+
+
+/* =================================================*/
+
+*:after,*:before {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	outline:0;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {text-decoration: none;}
+
+ul {list-style-type: none;}
+
+p {margin: 1em 0;}
+
+h2 {margin: 1.5em 0;}
+
+.post-container h2,.post-container p,figure,ul {margin: 0;}
+
+.img-responsive {max-width: 100%;height: auto;}
+
+
+::selection {
+background:#00BCD4;
+color:#fff;
+}
+::-moz-selection {
+background:#00BCD4;
+color:#fff;
+}
+::-webkit-selection {
+background:#00BCD4;
+color:#fff;
+}
+
+
+/* ==============  CLEARFIX ===============*/
+nav:after,#bio:after,.contenedor:after,#contact:after,#main-footer:after,.text:after,#site-links:after,#navigation:after {clear: both;}
+
+nav:after,nav:before,#bio:after,#bio:before,.contenedor:after,.contenedor:before,#contact:after,#contact:before,#main-footer:after,#main-footer:before,.text:after,.text:before,#site-links:after,#site-links:before,#navigation:after,#navigation:before{content: "";display: table;}
+
+/*===============================================================*/
+
+/* -------------------- EFECTO DE REBOTE ---------------------*/
+
+@-webkit-keyframes bounce{
+	from,to{-webkit-transform:translate(0,0);}
+
+	50%{-webkit-transform:translate(0,5px);}
+}
+
+@-moz-keyframes bounce{
+	from,to{-moz-transform:translate(0,0);}
+	50%{-moz-transform:translate(0,5px)}
+}
+
+@keyframes bounce {
+	from,to{-webkit-transform:translate(0,0);
+	-moz-transform:translate(0,0);
+	-ms-transform:translate(0,0);
+	-o-transform:translate(0,0);
+	transform:translate(0,0)}
+	50%{-webkit-transform:translate(0,5px);
+	-moz-transform:translate(0,5px);
+	-ms-transform:translate(0,5px);
+	-o-transform:translate(0,5px);
+	transform:translate(0,5px);}
+
+}
+/* ======================================================*/
+
+
+/* ========================================================*/
+
+/* ====================== HEADER =====================*/
+
+
+#portada {
+	color:#ffffff; 
+	background: url(images/medicina.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:cover;
+	width: 100%;
+	z-index: 0;
+	position: relative;
+	min-height: 400px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+}
+
+.fondo {
+	background: rgba(67, 83, 199, 0.4);
+	z-index: 1;
+	
+}
+
+.container {
+	z-index: 2;
+	text-align: center;
+
+
+}
+
+.wrapper-titles {
+	font-family: 'Open Sans';
+	text-transform: uppercase;
+
+}
+.wrapper-titles h1 {
+	font-size: 3.3em;
+	font-weight: 600;
+	letter-spacing: 0.28em;
+	line-height: 1.2;
+	margin: 5px 0;
+}
+
+.wrapper-titles h2 {
+	letter-spacing: 5px;
+	font-weight: 300;
+	margin: 0.83em;
+	font-size: 1.4em;
+}
+
+#logo {
+	z-index: 2;
+	position: absolute;
+	top: 3%;
+	left: 1.5%;
+
+}
+
+#logo a {color: #fff;}
+
+#logo img {
+	max-width: 100px;
+	width: 25%;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#logo span{
+	vertical-align: middle;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-left: -10px;
+	margin-top: -18px;
+
+}
+
+.icon-scroll {
+	width: 19px;
+	height: 26px;
+	margin: 7% 0;
+	display: inline-block;
+	 background: url('images/button-discover.png') no-repeat center center;
+	-moz-transition:all .15s ease 0;
+	-webkit-transition:all .15s ease 0;
+	transition:all .15s ease-out 0;
+	-webkit-animation:bounce 1.5s infinite ease;
+	-moz-animation:bounce 1.5s infinite ease;
+	animation:bounce 1.5s infinite ease;
+}
+
+
+/*========================= NAVIGATION BAR ===================================*/
+nav,.fixed {position: fixed;}
+
+nav {top: 3px;right: 0;z-index: 2000;}
+
+.navbar-toggle-right {
+	float: right;
+	margin: 0px 6px 6px 0px;
+	padding: 24px;
+	background: transparent;
+	border:0px none;
+}
+
+.white-background {background: #fff;}
+
+.navbar-toggle-right:active {
+	border: none;
+}
+
+nav .navbar-toggle-right .icon-bar {
+	display: block;
+	width: 36px;
+	height: 6px;
+	margin-top: 6px;
+}
+
+#navigation {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 20;
+	padding-top: 5%;
+	background: #00BCD4;
+	opacity: 0.85;
+}
+
+
+#navigation ul{
+	width: 60%;
+	float: right;
+	margin-right: 5%;
+	padding: 4% 0;
+
+
+}
+#navigation ul li a{
+	padding: 15px;
+	text-align: left;
+	font: 300 1.8em "dido",'Open-Sans',helvetica,sans-serif;
+	display: block;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	background: #00BCD4;
+	color:#fff;
+	
+}
+
+#navigation #horario {
+	width: 25%;
+	margin-right: 5%;
+	margin-left: 3%;
+	padding: 3% 4% 7%;
+	float: right;
+	background: #fff;
+	border-radius: 5px;
+
+}
+
+
+/*======================= SECTION BIOGRAFIA =================================*/
+#bio {
+	background: #00BCD4;
+	color: #fff;
+
+	
+}
+.wrapper-img {
+	float: left;
+	width: 50%;
+	margin: 0;
+	
+}
+.text {
+	float: left;
+	width: 50%;
+	padding: 4%;
+
+}
+.text p {
+	  font-family: "helvetic_world";
+	  font-size: 1.25em;
+	  line-height: 1.5;
+}
+.subtitle {
+	font-size: 1.8em;
+	font-style: italic;
+}
+
+.title {
+	text-transform: uppercase;
+	font-family: "dido";
+	font-size: 4.5em;
+	font-weight: 500;
+}
+.title:after {
+	content: "";
+	display: block;
+	width: 130px;
+	background: #fff;
+	height: 2px;
+	margin: 20px 15px;
+}
+
+
+.wrapper-img img {
+	width: 100%;
+	height:100%;
+}
+
+
+
+/* =================== SECTION SERVICIOS =======================*/
+
+#servicios {
+	width: 100%;
+	background:#fffffa;
+	padding: 6% 0;
+}
+#servicios h1{
+	text-align: center;
+}
+
+#servicios a {color:#00BCD4;}
+
+#servicios .title:after {
+	margin: 20px auto;
+	background: #00BCD4;
+}
+
+
+.caja {
+	float: left;
+	width: 24%;
+	padding: 0 1%;
+	margin: 1% 0;
+}
+
+.caja:first-child {
+	margin-left: 2%;
+}
+
+.caja img{width: 100%;height: 100%;}
+
+.post-container {padding: 2% 0;}
+
+.post-container h2 {text-align: center;padding: 3% 0;}
+
+.post-container p {letter-spacing: 1px;font-weight: 400;line-height: 1.5;text-align: left;padding: 0 0.5%;}
+
+
+.estilos {color:#00BCD4;}
+
+
+/*================ SECTION CONTACTO ================================*/
+
+#contact {
+	width: 100%;
+	background: #00BCD4;
+	font-size: 16px;
+	
+
+}
+
+.mapas {
+	float: left;
+	height: 100%;
+	width: 50%;
+
+}
+
+#map-canvas {
+	width: 100%;
+	height: 100%;
+}
+
+#location-info {
+	float: left;
+	width:50%;
+	height: 100%;
+	color: #fff;
+	padding:7%;
+}
+
+#location-info a {color: #fff;}
+
+#location-info h2 {
+	font:700 4.5em/1.5 'Open Sans';
+	margin-bottom: 0.8em;
+	
+}
+
+#location-info p {
+	font:400 1.8em/1.2 'Open Sans';
+}
+
+#legend { background: white;padding: 15px 20px;border-radius: 4px;}
+
+#legend  p {font-size: 1.5em;}
+/* ========== FOOTER =================*/
+
+#main-footer {
+	width: 100%;
+	background:#f4f6f7;
+	padding: 6%;
+	display: block;
+	
+	
+}
+
+#site-links {width: 50%;font-size: 16px;}
+
+#site-links p {letter-spacing: 0.2px;line-height: 1.5;font-size: 1.4em;margin: 1% 0;}
+
+#site-links ul li a {
+	color: #92A0AE;
+	letter-spacing: 0.2px;
+	line-height: 2;
+	font-size: 1em;
+
+}
+
+
+#site-links a:hover {
+	opacity: 0.5;
+}
+
+#second-footer {
+	width: 100%;
+	padding: 1%;
+	background: #1D1E30;
+	
+}
+
+.copyright {color:  #fff;text-align: center;}
+
+/* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
+
+
+.titulo-main {font-size: 3.5em;text-align: center;}
+
+
+#Content-Medicina {width: 100%;}
+
+
+/* ================= RESPONSIVE DESIGN =====================*/
+
+
+@media screen and (max-width: 1200px) {
+
+	body { font-size: 14px; }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+	#portada, #bio, #servicios { font-size: 12px; }
+
+	#bio .wrapper-parrafo {font-size: 13px;}
+
+	#site-links {font-size: 14px;width: 95%;}	
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+
+	#site-links {font-size: 12px;}
+
+	/* ============ biografia ==================*/
+	.wrapper-img {width: 46%;}
+
+	.text {padding: 2% 3%;}
+
+	/*------------------------*/
+
+	#portada { font-size: 10px; }
+
+	#bio, #servicios {font-size:11px; }
+
+	#contact {font-size: 12px;}
+
+	
+
+}
+
+
+@media screen and (max-width: 790px) {
+
+		/* ------- biografia -------*/
+		.text {padding: 3% 6%;}
+
+		.caja {width: 85%;float: none;max-width: 600px;margin: 0 auto;}
+
+		.caja:first-child {margin: 0 auto;}
+		/* =======================================================*/
+
+		#site-links {display: none;}
+
+		#portada { font-size: 9px; }
+
+		.text {width: 100%;float: none;}
+
+		.wrapper-img {float: none;width: 100%;max-height: 400px;overflow: hidden;}
+
+		.wrapper-img img {max-height: 100%;}
+
+		
+
+		/* ====== CONTACTO =======================*/
+
+	#location-info {width: 100%;float: none;}
+
+	#location-info h2 {margin: 1em 0;}
+
+	.mapas {float: none;height: 100%;width: 100%;}
+
+	
+
+	/*==============================================*/
+}
+
+@media screen and (max-width: 570px) {
+
+	#portada { font-size: 8px; }
+
+	#contact {font-size: 11px;}		
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+	#portada { font-size: 7px; }
+
+	#location-info {width: 100%;float: none;}
+
+	.mapas {float: none;height: 100%;width: 100%;}
+
+	#contact {font-size: 10px;}
+
+	#main-footer {font-size: 12px;}
+
+	#site-links {padding-left:4%;width: 100%;float: none;}
+
+}
+
+
+
+
+

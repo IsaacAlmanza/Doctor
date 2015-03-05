@@ -33,7 +33,7 @@
 
 					menu.click( function() {
 
-						$('#navigation').slideToggle(800);
+						$('#navigation').fadeToggle(400);
 
 						if (inicio%2==0){
 							$elemento1.transition({ x:0, y:12 },500);

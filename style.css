@@ -20,6 +20,8 @@
 
 .white-back {background: #fff;}
 
+.white-background {background: #fff;}
+
 
 /* =================================================*/
 
@@ -123,33 +125,20 @@ nav:after,nav:before,#bio:after,#bio:before,.contenedor:after,.contenedor:before
 	-o-user-select:none;
 }
 
-.fondo {
-	background: rgba(67, 83, 199, 0.4);
-	z-index: 1;
-	
-}
+.fondo {background: rgba(67, 83, 199, 0.4);z-index: 1;}
 
-.container {
-	z-index: 2;
-	text-align: center;
+.container {z-index: 2;text-align: center;}
 
+.wrapper-titles {text-transform: uppercase;}
 
-}
-
-.wrapper-titles {
-	font-family: 'Open Sans';
-	text-transform: uppercase;
-
-}
 .wrapper-titles h1 {
-	font-size: 3.3em;
-	font-weight: 600;
+	font:600 3.3em/1.2  'Open Sans',helvetica,sans-serif;;
 	letter-spacing: 0.28em;
-	line-height: 1.2;
 	margin: 5px 0;
 }
 
 .wrapper-titles h2 {
+	font-family: 'Open Sans',helvetica,sans-serif;
 	letter-spacing: 5px;
 	font-weight: 300;
 	margin: 0.83em;
@@ -210,7 +199,7 @@ nav {top: 3px;right: 0;z-index: 4000;}
 	border:0px none;
 }
 
-.white-background {background: #fff;}
+
 
 .navbar-toggle-right:active {
 	border: none;
@@ -335,7 +324,7 @@ nav .navbar-toggle-right .icon-bar {
 	
 }
 
-.text {float: left;width: 50%;padding: 3%;}
+.text {float: left;width: 50%;padding: 2% 4%;}
 
 .text p {
 	  font-family: "helvetic_world";
@@ -362,23 +351,19 @@ nav .navbar-toggle-right .icon-bar {
 }
 
 
-.wrapper-img img {
-	width: 100%;
-	height:100%;
-}
-
+.wrapper-img img {width: 100%;height:100%;}
 
 
 /* =================== SECTION SERVICIOS =======================*/
+
+
 
 #servicios {
 	width: 100%;
 	background:#fffffa;
 	padding: 6% 0;
 }
-#servicios h1{
-	text-align: center;
-}
+#servicios h1{text-align: center;}
 
 #servicios a {color:#00BCD4;}
 
@@ -402,16 +387,12 @@ nav .navbar-toggle-right .icon-bar {
 
 /*================ SECTION CONTACTO ================================*/
 
-#contact {
-	width: 100%;
-	background: #00BCD4;
-	font-size: 16px;
-	
 
-}
+
+
+#contact {width: 100%;background: #00BCD4;font-size: 16px;}
 
 .mapas {float: left;height: 100%;width: 50%;}
-
 
 #map-canvas {width: 100%;height: 100%;}
 
@@ -433,6 +414,9 @@ nav .navbar-toggle-right .icon-bar {
 #legend { background: white;padding: 15px 20px;border-radius: 4px;}
 
 #legend  p {font-size: 1.5em;}
+
+
+
 /* ========== FOOTER =================*/
 
 #main-footer {
@@ -468,11 +452,39 @@ nav .navbar-toggle-right .icon-bar {
 
 /* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
 
-
-.titulo-main {font-size: 3.5em;text-align: center;}
+.titulo-main {font-size: 3.7em;text-align: center;}
 
 
 #Content-Medicina {width: 100%;}
+
+
+
+/* ============ Contacto Pagina ====================*/
+.ContactoSection {
+	background: url(images/fondo.jpg) no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+
+#ContentContacto{
+	padding: 10% 0;
+	width: 75%;
+	height: 55%;
+	background:#fff;
+	opacity: 0.5;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+
+
+
+
 
 
 /* ================= RESPONSIVE DESIGN =====================*/

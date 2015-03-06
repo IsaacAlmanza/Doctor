@@ -31,6 +31,11 @@
 					//Function to the css rule
 					function checkSize(){if (imagen_contenido.css("float") == "none" ){imagen_contenido.height('auto');}}
 
+
+					$('#BotonHorario').click(function(){
+						
+						$('#horario').slideToggle(500);
+					}) 
 					menu.click( function() {
 
 						$('#navigation').fadeToggle(400);

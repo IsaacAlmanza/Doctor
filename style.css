@@ -430,14 +430,16 @@ nav .navbar-toggle-right .icon-bar {
 
 #main-footer {
 	width: 100%;
-	background:#f4f6f7;
-	padding: 6%;
-	display: block;
+	
 }
 
-#site-links {width: 50%;font-size: 16px;float: right;}
+#cont-Main-footer {background:#f4f6f7;display: table;padding: 5%;width: 100%;}
 
-#site-links p {letter-spacing: 0.2px;line-height: 1.5;font-size: 1.4em;margin: 1% 0;}
+#site-links {width: 50%;font-size: 16px;display: table-cell;}
+
+#site-links ul {padding: 0;margin:0;}
+
+#site-links h3 {letter-spacing: 0.2px;line-height: 1.5;font-size: 1.4em;margin: 1% 0;}
 
 #site-links ul li a {
 	color: #92A0AE;
@@ -445,7 +447,6 @@ nav .navbar-toggle-right .icon-bar {
 	line-height: 2;
 	font-size: 1em;
 }
-
 
 #site-links a:hover {
 	opacity: 0.5;
@@ -500,7 +501,7 @@ nav .navbar-toggle-right .icon-bar {
 	height: 90%;
 	background:#fff;
 	border-radius: 4px;
-	opacity: 0.85;
+	opacity: 0.65;
 }
 
 .ContenedorForm{display: table;width: 100%;padding:2% 0;}

@@ -405,18 +405,13 @@ nav .navbar-toggle-right .icon-bar {
 
 #map-canvas {width: 100%;height: 100%;}
 
+.email-info:hover {text-decoration: underline;}
 
-#location-info {
-	float: left;
-	width:50%;
-	height: 100%;
-	color: #fff;
-	padding:5% 
-}
+#location-info {float: left;width:50%;height: 100%;color: #fff;padding:2% 4%;}
 
 #location-info a {color: #fff;}
 
-#location-info h2 {font:700 4.5em/1.5 'Open Sans';margin-bottom: 0.8em;}
+#location-info h2 {font:700 4.5em/1.5 'Open Sans';margin: 0.8em 0;}
 
 #location-info p {font:400 1.8em/1.2 'Open Sans';}
 
@@ -428,12 +423,12 @@ nav .navbar-toggle-right .icon-bar {
 
 /* ========== FOOTER =================*/
 
-#main-footer {
-	width: 100%;
-	
-}
+
+#main-footer {width: 100%;}
 
 #cont-Main-footer {background:#f4f6f7;display: table;padding: 5%;width: 100%;}
+
+.info {display: table-cell;width: 50%;}
 
 #site-links {width: 50%;font-size: 16px;display: table-cell;}
 
@@ -441,32 +436,20 @@ nav .navbar-toggle-right .icon-bar {
 
 #site-links h3 {letter-spacing: 0.2px;line-height: 1.5;font-size: 1.4em;margin: 1% 0;}
 
-#site-links ul li a {
-	color: #92A0AE;
-	letter-spacing: 0.2px;
-	line-height: 2;
-	font-size: 1em;
-}
+#site-links ul li a {color: #92A0AE;letter-spacing: 0.2px;line-height: 2;font-size: 1em;}
 
-#site-links a:hover {
-	opacity: 0.5;
-}
+#site-links a:hover {opacity: 0.5;}
 
-#second-footer {
-	width: 100%;
-	padding: 1%;
-	background: #1D1E30;
-}
+#second-footer {width: 100%;padding: 1%;background: #1D1E30;}
 
 .copyright {color:  #fff;text-align: center;}
+
 
 /* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
 
 .titulo-main {font-size: 3.7em;text-align: center;}
 
-
 #Content-Medicina {width: 100%;}
-
 
 
 /* ============ Contacto Pagina ====================*/

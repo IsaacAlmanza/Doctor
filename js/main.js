@@ -32,9 +32,9 @@
 					function checkSize(){if (imagen_contenido.css("float") == "none" ){imagen_contenido.height('auto');}}
 
 
-					$('#BotonHorario').click(function(){
+					$('#BotonHorario').hover(function(){
 						
-						$('#horario').slideToggle(500);
+						$('#horario').slideToggle(800);
 					}) 
 					menu.click( function() {
 

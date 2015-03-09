@@ -443,24 +443,6 @@ nav .navbar-toggle-right .icon-bar {
 
 #main-footer {width: 100%;}
 
-#cont-Main-footer {background:#f4f6f7;display: table;padding: 5%;width: 100%;}
-
-.info {display: table-cell;width: 50%;}
-
-#site-links {width: 50%;font-size: 16px;display: table-cell;}
-
-#site-links ul {padding: 0;margin:0;}
-
-#site-links h3 {letter-spacing: 0.2px;line-height: 1.5;font-size: 1.4em;margin: 1% 0;}
-
-#site-links ul li a {color: #92A0AE;letter-spacing: 0.2px;line-height: 2;font-size: 1em;}
-
-#site-links a:hover {opacity: 0.5;}
-
-#second-footer {width: 100%;padding: 1%;background: #1D1E30;}
-
-.copyright {color:  #fff;text-align: center;}
-
 
 /* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
 

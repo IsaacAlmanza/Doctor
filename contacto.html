@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ContactoSection">
+<html>
 <head>
 	<title>Contacto</title>
 	<meta charset="utf-8" />
@@ -12,9 +12,9 @@
 	<header>
 		<nav>
 			<button class="navbar-toggle-right" type="button">
-				<span class="icon-bar white-background"></span>
-				<span class="icon-bar  white-background"></span>
-				<span class="icon-bar  white-background"></span>
+				<span class="icon-bar color-negro"></span>
+				<span class="icon-bar color-negro"></span>
+				<span class="icon-bar color-negro"></span>
 			</button>
 		</nav>
 			<div id="navigation">
@@ -42,14 +42,39 @@
 					</div>
 			</div>
 	</header>
-	<section id="ContentContacto">
-		<h2 class="color-celeste">Complete el Formulario</h2>
-		<div class="ContenedorForm">
-			<div class="info-contact">
-
+	<div class="sub-header">
+		<div class="blur">
+			<div class="sub-header-info">
+				<div class="container-titles">
+				<h2>CONTACT US</h2>
+				<h3>Have a question? Our friendly staff is here to help</h3>
+				</div>
 			</div>
-			<div class="contactForm">
-				<form id="FContact">
+		</div>
+	</div>
+	<section id="outerInfoContact">
+		<div id="innerInfo">
+			<div class="infoGeneral">
+				<h2 class="title color-celeste">Contactenos</h2>
+				<p><b>Tel.:</b> (+507) 204-8311</p>
+				<p><b>Celular:</b> (+507) 6284-8629 / 6550-3360</p>
+				<p><b>Directos:</b> 203-3281 / 82</p>
+				<p><b>Email: </b><a class="email-info" target=" _blank" href="mailto:jb06duran@gmail.com" alt="mailto:jb06duran@gmail.com">jb06duran@gmail.com</a></p>
+			</div>
+			<div class="infoLocation">
+				<h2 class="title color-celeste">Nos Encontramos en: </h2>
+				<p>Consultorios Punta Pacifica</p>
+				<p>Estamos Ubicados en el 1º piso</p>
+				<p>Consultorio No. 118</p>
+			</div>
+		</div>
+	</section>
+	<section id="sectionMaps">
+		<div id="map-canvas"></div>
+	</section>
+	<section id="outerContainerFormulario">
+		<div id="innerContenedorForm">
+				<form id="Formulario">
 					<ul>
 						<li><input type="text" name="form_name" id="i-contact-name" placeholder="Nombre"></li>
 						<li><input type="email" name="form_email" id="i-contact-email" placeholder="E-mail"></li>
@@ -61,12 +86,13 @@
 						</li>
 					</ul> 
 				</form>
-			</div><!-- CIERRA contactForm  -->
 		</div><!-- CIERRA CONTENEDOR FORM  -->
 	</section>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.transit.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="js/googleMaps.js"></script>
 </body>
 </html>

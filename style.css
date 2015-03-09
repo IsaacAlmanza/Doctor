@@ -21,6 +21,20 @@ input[type="text"],input[type="email"],textarea{
 }
 
 
+.button {
+	display: inline-block;
+	height: 39px;
+	line-height: 40px;
+	padding: 0 1em;
+	color: #fff;
+	background-color:#00BCD4;
+	font-size: 1em;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+
 /* =============== COLOR ===============*/
 
 .color-negro{background: #000;}
@@ -28,6 +42,8 @@ input[type="text"],input[type="email"],textarea{
 .color-celeste{color: #00BCD4;}
 
 .white-back {background: #fff;}
+
+.back-celeste {background:#00BCD4; }
 
 .white-background {background: #fff;}
 
@@ -455,50 +471,52 @@ nav .navbar-toggle-right .icon-bar {
 
 /* ============ Contacto Pagina ====================*/
 
-.button {
-	display: inline-block;
-	height: 39px;
-	line-height: 40px;
-	padding: 0 1em;
-	color: #fff;
-	background-color:#00BCD4;
-	font-size: 1em;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-decoration: none;
-}
+#outerInfoContact {width: 100%;padding: 5%;}
 
-
-.ContactoSection {
-	background: url(images/fondo.jpg) no-repeat center center;
-	background-size: cover;
+.sub-header {
+	height: 275px;
 	width: 100%;
-	height: 100%;
+	background:url(images/fondo1.jpg) no-repeat center 45%;
+	background-size:cover;
 	position: relative;
-	padding: 2% 10%;
+	z-index: 0;
 }
 
+.blur {background: #00BCD4;opacity: 0.5;z-index: 1;width: 100%;height: 100%;padding: 4%}
 
-#ContentContacto{
-	padding: 2% 5%;
+.sub-header-info {z-index: 5;color:#fff;}
+
+#sectionMaps {width: 100%;height: 450px;}
+
+
+#outerContainerFormulario{
+	padding: 5%;
 	width: 100%;
-	height: 90%;
 	background:#fff;
-	border-radius: 4px;
 	opacity: 0.65;
 }
 
-.ContenedorForm{display: table;width: 100%;padding:2% 0;}
 
-.contactForm {display: table-cell;width: 60%;}
+#innerContenedorForm{width: 65%;padding:2% 0;margin: 0 auto;}
 
-.contactForm .submit {text-align: right;}
+#innerInfo{padding: 1% 0;width: 70%;margin:0 auto;text-align: center;}
 
-#FContact {padding: 1% 0;}
+#innerInfo .title {margin:0.7em;font-size: 3.5em;line-height: 1.8;}
 
-#FContact ul li {margin-bottom: 20px;}
+#innerInfo .title:after{background: #00BCD4;margin:0 auto; }
 
-#FContact textarea {height:200px;}
+.infoGeneral {margin-bottom: 3%;}
+
+#innerInfo p {font-size: 1.2em;font-weight: 400;letter-spacing: 1.5px;}
+
+
+
+
+#Formulario{padding: 1% 0;}
+
+#Formulario ul li {margin-bottom: 20px;}
+
+#Formulario textarea {height:200px;}
 
 
 

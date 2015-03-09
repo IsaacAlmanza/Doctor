@@ -45,15 +45,13 @@
 	<div class="sub-header">
 		<div class="blur">
 			<div class="sub-header-info">
-				<div class="container-titles">
 				<h2>CONTACT US</h2>
 				<h3>Have a question? Our friendly staff is here to help</h3>
-				</div>
 			</div>
 		</div>
 	</div>
 	<section id="outerInfoContact">
-		<div id="innerInfo">
+		<div id="innerInfo" class="estilo-fuente">
 			<div class="infoGeneral">
 				<h2 class="title color-celeste">Contactenos</h2>
 				<p><b>Tel.:</b> (+507) 204-8311</p>
@@ -71,20 +69,29 @@
 	</section>
 	<section id="sectionMaps">
 		<div id="map-canvas"></div>
+		<div id="legend"></div>
 	</section>
 	<section id="outerContainerFormulario">
-		<div id="innerContenedorForm">
-				<form id="Formulario">
-					<ul>
-						<li><input type="text" name="form_name" id="i-contact-name" placeholder="Nombre"></li>
-						<li><input type="email" name="form_email" id="i-contact-email" placeholder="E-mail"></li>
-						<li><textarea name="form_message" id="i-contact-msg" placeholder="Mensaje"></textarea></li>
-						<li class="submit" >
-							<button class="button" type="submit">
-								<span class="button-text">Enviar</span>
-							</button>
-						</li>
-					</ul> 
+		<div id="innerContenedorForm" class="estilo-fuente">
+			<h2 class="title color-celeste">Contact us by Form</h2>
+			<form id="Formulario">
+				<div class="box-50">
+					<input type="text" name="form_name" id="i-contact-name" placeholder="Primer Nombre">
+					<input type="text" name="form_last_name" id="i-contact-email" placeholder="Primer Apellido">
+				</div>
+				<div class="box-50">
+					<input type="email" name="form_email" id="i-contact-email" placeholder="E-mail">
+					<input type="tel" name="form_phone" id="i-contact-email" placeholder="Número de telefono">
+				</div>
+				<div class="box-100">
+					<textarea name="form_message" id="i-contact-msg" placeholder="Mensaje"></textarea>
+				</div>
+				<div class="submit" >
+					<button class="button" type="submit">
+						<span class="button-text">Enviar</span>
+					</button>
+				</div>
+		
 				</form>
 		</div><!-- CIERRA CONTENEDOR FORM  -->
 	</section>

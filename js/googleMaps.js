@@ -22,7 +22,7 @@
         
           legend.appendChild(div);
 
-		 map.controls[google.maps.ControlPosition.RIGHT_TOP].push(
+		 map.controls[google.maps.ControlPosition.TOP_LEFT].push(
  		 document.getElementById('legend'));
       }
       

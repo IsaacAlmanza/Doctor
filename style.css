@@ -418,9 +418,11 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 #partners {width: 100%;padding: 3%;}
 
-.outer-container {width: 70%;margin: 0 auto;}
+.outer-container {width: 85%;margin: 0 auto;}
 
-/* ========== FOOTER =================*/
+.inner-container {width: 100%;}
+
+/* ========== FOOTER ==============*/
 
 
 #main-footer {width: 100%;}

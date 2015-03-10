@@ -27,7 +27,6 @@ textarea,input[type="tel"]{
 	height: 39px;
 	line-height: 40px;
 	padding: 0 1em;
-	color: #fff;
 	background-color:#00BCD4;
 	font-size: 1em;
 	font-weight: 700;
@@ -42,11 +41,11 @@ textarea,input[type="tel"]{
 
 .color-celeste{color: #00BCD4;}
 
-.white-back {background: #fff;}
-
 .back-celeste {background:#00BCD4; }
 
 .white-background {background: #fff;}
+
+.white-color {color: #fff;}
 
 
 /* =================================================*/
@@ -56,6 +55,7 @@ textarea,input[type="tel"]{
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
+
 * {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -153,7 +153,7 @@ nav:after,nav:before,#bio:after,#bio:before,.contenedor:after,.contenedor:before
 
 .fondo {background: rgba(67, 83, 199, 0.4);z-index: 1;}
 
-.container {z-index: 2;text-align: center;}
+.container {z-index: 2;}
 
 .wrapper-titles {text-transform: uppercase;}
 
@@ -179,7 +179,7 @@ nav:after,nav:before,#bio:after,#bio:before,.contenedor:after,.contenedor:before
 
 }
 
-#logo a {color: #fff;}
+
 
 #logo img {
 	max-width: 100px;
@@ -236,6 +236,7 @@ nav .navbar-toggle-right .icon-bar {
 	width: 36px;
 	height: 6px;
 	margin-top: 6px;
+	background: #fff;
 }
 
 #navigation {
@@ -341,7 +342,7 @@ nav .navbar-toggle-right .icon-bar {
 /*======================= SECTION BIOGRAFIA =================================*/
 
 
-#bio {background: #00BCD4;color: #fff;}
+#bio {background: #00BCD4;}
 
 
 .wrapper-img {
@@ -390,7 +391,7 @@ nav .navbar-toggle-right .icon-bar {
 	background:#fffffa;
 	padding: 6% 0;
 }
-#servicios h1{text-align: center;}
+
 
 #servicios a {color:#00BCD4;}
 
@@ -404,7 +405,7 @@ nav .navbar-toggle-right .icon-bar {
 
 .post-container {padding: 2% 0;}
 
-.post-container h2 {text-align: center;padding: 3% 0;}
+.post-container h2 {padding: 3% 0;}
 
 .post-container p {letter-spacing: 1px;font-weight: 400;line-height: 1.5;text-align: left;padding: 0 0.5%;}
 
@@ -412,17 +413,12 @@ nav .navbar-toggle-right .icon-bar {
 .estilos {color:#00BCD4;}
 
 
-/*================ SECTION CONTACTO ================================*/
+/*================ SECTION Our Sponsors & Partners ================================*/
 
 
+#partners {width: 100%;padding: 3%;}
 
-
-
-#legend { background: white;padding: 15px 20px;border-radius: 4px;margin-top: 1%;}
-
-#legend  p {font-size: 1.5em;}
-
-
+.outer-container {width: 70%;margin: 0 auto;}
 
 /* ========== FOOTER =================*/
 
@@ -432,7 +428,7 @@ nav .navbar-toggle-right .icon-bar {
 
 /* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
 
-.titulo-main {font-size: 3.7em;text-align: center;}
+.titulo-main {font-size: 3.7em;}
 
 #Content-Medicina {width: 100%;}
 
@@ -459,6 +455,14 @@ nav .navbar-toggle-right .icon-bar {
 
 #sectionMaps {width: 100%;height: 450px;}
 
+#map-canvas {width: 100%;height: 100%;}
+
+#legend { background: white;padding: 15px 20px;border-radius: 4px;margin-top: 1%;}
+
+#legend  p {font-size: 1.5em;}
+
+
+
 #outerContainerFormulario{
 	padding: 5%;
 	width: 100%;
@@ -466,10 +470,10 @@ nav .navbar-toggle-right .icon-bar {
 	opacity: 0.65;
 }
 
+.text-center {text-align: center;}
 
 
-
-#innerInfo{padding: 1% 0;width: 70%;margin:0 auto;text-align: center;}
+#innerInfo{padding: 1% 0;width: 70%;margin:0 auto;}
 
 .estilo-fuente .title {margin:0.7em 0;font-size: 3.5em;line-height: 1.8;}
 
@@ -479,7 +483,7 @@ nav .navbar-toggle-right .icon-bar {
 
 #innerInfo p {font-size: 1.2em;font-weight: 400;letter-spacing: 1.5px;}
 
-#innerContenedorForm{width: 75%;padding:2% 0;margin: 0 auto;text-align: center;}
+#innerContenedorForm{width: 75%;padding:2% 0;margin: 0 auto;}
 
 #Formulario{padding: 1% 0;}
 

@@ -47,7 +47,7 @@
 							$elemento1.transition({rotate:'45deg'},500);
 							$elemento3.transition({rotate:'-45deg'},500);
 							inicio++;
-							 $('span.icon-bar').addClass('white-back');
+							 $('span.icon-bar').addClass('white-background');
 
 							
 						}else {
@@ -57,7 +57,7 @@
 							$elemento3.transition({ x:0, y:0 },500);
 							$elemento2.transition({ opacity:1 },500);
 							inicio++;
-							 $('span.icon-bar').removeClass('white-back');
+							 $('span.icon-bar').removeClass('white-background');
 						}
 
 

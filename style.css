@@ -12,7 +12,8 @@
 	src: url(fonts/helveticworld-regular-webfont.woff);
 }
 
-input[type="text"],input[type="email"],textarea,input[type="tel"]{
+input[type="text"],input[type="email"],
+textarea,input[type="tel"]{
 	border: 1px solid #00BCD4;
 	height: 50px;
 	width: 100%;
@@ -416,21 +417,6 @@ nav .navbar-toggle-right .icon-bar {
 
 
 
-#contact {width: 100%;background: #00BCD4;font-size: 16px;}
-
-.mapas {float: left;height: 100%;width: 50%;}
-
-#map-canvas {width: 100%;height: 100%;}
-
-.email-info:hover {text-decoration: underline;}
-
-#location-info {float: left;width:50%;height: 100%;color: #fff;padding:2% 4%;}
-
-#location-info a {color: #fff;}
-
-#location-info h2 {font:700 4.5em/1.5 'Open Sans';margin: 0.8em 0;}
-
-#location-info p {font:400 1.8em/1.2 'Open Sans';}
 
 #legend { background: white;padding: 15px 20px;border-radius: 4px;margin-top: 1%;}
 

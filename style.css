@@ -231,7 +231,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	border: none;
 }
 
-nav .navbar-toggle-right .icon-bar {
+.navbar-toggle-right .icon-bar {
 	display: block;
 	width: 36px;
 	height: 6px;

@@ -265,19 +265,16 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 
 }
+#navigation ul li {position: relative;padding: 15px 0;background: #00BCD4;overflow: hidden;}
 
 #navigation ul li a{
-	padding: 15px;
 	text-align: left;
 	font: 300 1.8em "dido",'Open-Sans',helvetica,sans-serif;
-	display: block;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	background: #00BCD4;
 	color:#fff;
 }
 
-#navigation ul li a:hover {}
 
 #container {
 	width: 30%;
@@ -486,7 +483,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 .infoGeneral {margin-bottom: 3%;}
 
-#innerInfo p {font-size: 1.2em;font-weight: 400;letter-spacing: 1.5px;}
+#innerInfo p {font-size: 1.3em;font-weight: 300;letter-spacing: 2px;}
 
 #innerContenedorForm{width: 75%;padding:2% 0;margin: 0 auto;}
 

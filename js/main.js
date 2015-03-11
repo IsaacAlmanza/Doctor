@@ -10,10 +10,9 @@
 			var imagen_contenido = $('figure.wrapper-img');
 			var portada = $('#portada');
 			var fondo = $('header.fondo');
-			var location_info = $('#location-info');
-			var contendor_mapa = $('section.mapas');
+			var icon_bar = $('span.icon-bar');
+			var b = 0;
 
-			contendor_mapa.height(location_info.outerHeight());
 			
 			
 			//=============padding dinamico ========================*/
@@ -47,7 +46,10 @@
 							$elemento1.transition({rotate:'45deg'},500);
 							$elemento3.transition({rotate:'-45deg'},500);
 							inicio++;
-							 $('span.icon-bar').addClass('white-background');
+							if(!(icon_bar.hasClass('white-background'))){
+								b++;
+								icon_bar.addClass('white-background');
+							}
 
 							
 						}else {
@@ -57,7 +59,9 @@
 							$elemento3.transition({ x:0, y:0 },500);
 							$elemento2.transition({ opacity:1 },500);
 							inicio++;
-							 $('span.icon-bar').removeClass('white-background');
+							if(b>=1){icon_bar.removeClass('white-background');}
+							
+							
 						}
 
 

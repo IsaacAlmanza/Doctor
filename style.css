@@ -98,9 +98,10 @@ color:#fff;
 
 
 /* ==============  CLEARFIX ===============*/
-nav:after,#bio:after,.contenedor:after,#contact:after,#main-footer:after,.text:after,#site-links:after,#navigation:after,.box-50:after {clear: both;}
 
-nav:after,nav:before,#bio:after,#bio:before,.contenedor:after,.contenedor:before,#contact:after,#contact:before,#main-footer:after,#main-footer:before,.text:after,.text:before,#site-links:after,#site-links:before,#navigation:after,#navigation:before,.box-50:after,.box-50:before{content: "";display: table;}
+.clearfix:after{clear: both;}
+
+.clearfix:after,.clearfix:before{content: "";display: table;}
 
 /*===============================================================*/
 

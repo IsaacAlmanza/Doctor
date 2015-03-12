@@ -81,9 +81,52 @@
 		<header>
 			<h1 class="title white-color text-center">Nuestros Servicios</h1>
 		</header>
-
-		
-		
+		<div id="grid" class="grid clearfix">
+			<a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="images/img1.jpg" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+						<figcaption>
+							<h2>Medicina Integral</h2>
+							<p>Soko radicchio bunya nuts gram dulse.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="images/img2.jpg" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+						<figcaption>
+							<h2>Evaluaciones Médicas</h2>
+							<p>Two greens tigernut soybean radish.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="images/img3.jpg" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+						<figcaption>
+							<h2>Control de Peso </h2>
+							<p>Beetroot water spinach okra water.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
+					<figure>
+						<img src="images/img4.jpg" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+						<figcaption>
+							<h2>Serene</h2>
+							<p>Water spinach arugula pea tatsoi.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+		</div>
 	</section>
 	<section id="partners" class="white-background">
 		<div class="outer-container  estilo-fuente">
@@ -99,11 +142,40 @@
 	
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/snap.svg-min.js"></script>
 	<script type="text/javascript" src="assets/js/animations.min.js"></script>
 	<script type="text/javascript" src="assets/js/appear.min.js"></script>
 	<script type="text/javascript" src="assets/js/smoothscroll.min.js"></script>
 	<script type="text/javascript" src="js/jquery.transit.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+			(function() {
+	
+				function init() {
+					var speed = 250,
+						easing = mina.easeinout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+		</script>
 
 
 </body>

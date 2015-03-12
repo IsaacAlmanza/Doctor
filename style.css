@@ -31,6 +31,7 @@ textarea,input[type="tel"]{
 	background-color:#00BCD4;
 	font-size: 1em;
 	font-weight: 700;
+	border: none;
 	letter-spacing: 1px;
 	text-decoration: none;
 	border-radius: 5px;
@@ -388,32 +389,115 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 
 
-#servicios {
-	width: 100%;
-	padding: 6% 0;
-}
-
-
-#servicios a {color:#00BCD4;}
+#servicios {width: 100%;padding: 4% 0 10%;}
 
 #servicios .title:after {margin: 20px auto;background: #00BCD4;}
 
-.caja {float: left;width: 24%;padding: 0 1%;margin: 1% 0;}
+.grid {max-width: 1300px;width: 95%;margin: 0 auto;}
 
-.caja:first-child {margin-left: 2%;}
+.grid a {
+	float: left;
+	max-width: 450px;
+	width: 25%;
+	color: #333;
+}
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 5px;
+	background: #333;
+}
+.grid figure img {
+	position: relative;
+	display: block;
 
-.caja img{width: 100%;height: 100%;}
+	height: 430px;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	z-index: 11;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.grid figcaption h2 {
+	margin: 0 0 20px 0;
+	color: #3498db;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 130%;
+	transition: transform 0.3s;
+}
+.grid figcaption p {
+	padding: 0 20px;
+	color: #aaa;
+	font-weight: 300;
+	transition: opacity 0.3s, transform 0.3s;
+}
+.grid figcaption h2,
+.grid figcaption p {
+	transform: translateY(50px);
+}
 
-.post-container {padding: 2% 0;}
+.grid figure button {
+	position: absolute;
+	padding: 4px 20px;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	transition: opacity 0.3s, transform 0.3s;
+}
 
-.post-container h2 {padding: 3% 0;}
+.grid figcaption,
+.grid figcaption h2,
+.grid figcaption p,
+.grid figure button {
+	backface-visibility: hidden;
+}
 
-.post-container p {letter-spacing: 1px;font-weight: 400;line-height: 1.5;text-align: left;padding: 0 0.5%;}
+.grid svg {
+	position: absolute;
+	top: -1px; /* fixes rendering issue in FF */
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
 
+.grid svg path {
+	fill: #fff;
+}
 
+.grid a:hover figure img {
+	opacity: 1;
+}
 
+.grid a:hover figcaption h2,
+.grid a:hover figcaption p {
+	transform: translateY(0);
+}
 
-
+.grid a:hover figcaption p {
+	opacity: 0;
+}
+.grid figure button{
+	top: 50%;
+	left: 50%;
+	border: 3px solid #fff;
+	background: transparent;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(-50%) translateX(-50%) scale(0.25);
+}
+.grid a:hover figure button {
+	opacity: 1;
+	transform: translateY(-50%) translateX(-50%) scale(1);
+}
 /*================ SECTION Our Sponsors & Partners ================================*/
 
 

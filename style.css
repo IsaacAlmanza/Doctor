@@ -309,7 +309,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	position: absolute;
 	top: 50%;left: 50%;
 	transform:translate(-50%,-50%) rotate(90deg);
-	transition:all 1s ease;
+	transition:all 0.45s ease;
 }
 
 #BotonHorario:hover  img {transform-origin: 20% 40%;transform:rotate(180deg);}
@@ -343,7 +343,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 /*======================= SECTION BIOGRAFIA =================================*/
 
 
-#bio {background: #00BCD4;}
+#bio {background: #fff;}
 
 
 .wrapper-img {
@@ -389,7 +389,6 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 #servicios {
 	width: 100%;
-	background:#fffffa;
 	padding: 6% 0;
 }
 
@@ -411,7 +410,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 .post-container p {letter-spacing: 1px;font-weight: 400;line-height: 1.5;text-align: left;padding: 0 0.5%;}
 
 
-.estilos {color:#00BCD4;}
+
 
 
 /*================ SECTION Our Sponsors & Partners ================================*/

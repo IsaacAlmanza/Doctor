@@ -33,6 +33,7 @@ textarea,input[type="tel"]{
 	font-weight: 700;
 	letter-spacing: 1px;
 	text-decoration: none;
+	border-radius: 5px;
 }
 
 

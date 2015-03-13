@@ -7,7 +7,7 @@
 			var inicio = 2;
 
 			var contenedor_bio = $('div.text');
-			var imagen_contenido = $('figure.wrapper-img');
+			var imagen_contenido = $('#wrapper-img');
 			var portada = $('#portada');
 			var fondo = $('header.fondo');
 			var icon_bar = $('span.icon-bar');

@@ -393,7 +393,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 #servicios .title:after {margin: 20px auto;background: #fff;}
 
-.grid {max-width: 1300px;width: 95%;margin: 0 auto;}
+.grid {max-width: 1400px;width: 98%;margin: 0 auto;}
 
 .grid a {
 	float: left;
@@ -401,20 +401,27 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	width: 25%;
 	color: #333;
 }
-.grid figure {
+.grid .img-contenedor {
 	position: relative;
 	overflow: hidden;
 	margin: 5px;
 	background: #333;
 }
-.grid figure img {
+.grid .img-contenedor .servicio-img {
 	position: relative;
 	display: block;
 	height: 475px;
 	opacity: 0.7;
 	transition: opacity 0.3s;
 }
-.grid figcaption {
+
+#servicio-1 {background: url(images/img2.jpg) no-repeat 20% 110%;background-size: 140% 90%;}
+#servicio-2 {background: url(images/img3.jpg) no-repeat 20% 110%;background-size: 140% 90%;}
+#servicio-3 {background: url(images/img4.jpg) no-repeat 20% 110%;background-size: 140% 90%;}
+#servicio-4 {background: url(images/img1.jpg) no-repeat 30% 110%;background-size: 160% 90%;}
+
+
+.grid .servicio-info {
 	position: absolute;
 	top: 0;
 	z-index: 11;
@@ -423,7 +430,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	height: 100%;
 	text-align: center;
 }
-.grid figcaption h2 {
+.grid .servicio-info h2 {
 	margin: 0 0 20px 0;
 	color: #3498db;
 	text-transform: uppercase;
@@ -432,18 +439,18 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	font-size: 130%;
 	transition: transform 0.3s;
 }
-.grid figcaption p {
+.grid .servicio-info p {
 	padding: 0 20px;
 	color: #aaa;
 	font-weight: 300;
 	transition: opacity 0.3s, transform 0.3s;
 }
-.grid figcaption h2,
-.grid figcaption p {
+.grid .servicio-info h2,
+.grid .servicio-info p {
 	transform: translateY(50px);
 }
 
-.grid figure button {
+.grid .servicio-info button {
 	position: absolute;
 	padding: 4px 20px;
 	border: none;
@@ -453,10 +460,10 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	transition: opacity 0.3s, transform 0.3s;
 }
 
-.grid figcaption,
-.grid figcaption h2,
-.grid figcaption p,
-.grid figure button {
+.grid .servicio-info,
+.grid .servicio-info h2,
+.grid .servicio-info p,
+.grid .servicio-info button {
 	backface-visibility: hidden;
 }
 
@@ -472,19 +479,19 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	fill: #fff;
 }
 
-.grid a:hover figure img {
+.grid a:hover .img-contenedor .servicio-img {
 	opacity: 1;
 }
 
-.grid a:hover figcaption h2,
-.grid a:hover figcaption p {
+.grid a:hover .servicio-info h2,
+.grid a:hover .servicio-info p {
 	transform: translateY(0);
 }
 
-.grid a:hover figcaption p {
+.grid a:hover .servicio-info p {
 	opacity: 0;
 }
-.grid figure button{
+.grid .servicio-info button{
 	top: 50%;
 	left: 50%;
 	border: 3px solid #fff;
@@ -493,7 +500,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 	opacity: 0;
 	transform: translateY(-50%) translateX(-50%) scale(0.25);
 }
-.grid a:hover figure button {
+.grid a:hover .servicio-info button {
 	opacity: 1;
 	transform: translateY(-50%) translateX(-50%) scale(1);
 }

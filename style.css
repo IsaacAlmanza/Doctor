@@ -81,7 +81,6 @@ h2 {margin: 1.5em 0;}
 
 .post-container h2,.post-container p,figure,ul {margin: 0;}
 
-.img-responsive {max-width: 100%;height: auto;}
 
 
 ::selection {
@@ -485,7 +484,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 .grid a:hover .servicio-info h2,
 .grid a:hover .servicio-info p {
-	transform: translateY(0);
+	transform: translateY(10%);
 }
 
 .grid a:hover .servicio-info p {
@@ -507,13 +506,17 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 /*================ SECTION Our Sponsors & Partners ================================*/
 
 
-#partners {width: 100%;padding: 3%;}
+#partners {width: 100%;padding: 3% 0 10%;}
 
-.outer-container {width: 85%;margin: 0 auto;}
-
-.inner-container {width: 100%;}
+.outer-container {width: 85%;margin: 0 auto;padding-top: 1%}
 
 /* ========== FOOTER ==============*/
+
+.item {max-width: 250px;}
+
+.item img {margin: 0 auto;display:block;}
+
+.item:first-child img {max-height: 200px;}
 
 
 #main-footer {width: 100%;}

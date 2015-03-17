@@ -1,0 +1,455 @@
+/*
+	* ED GRID  es un FRAMEWORK SOLO CSS para crear diseños web
+	* responsive y mobile first. Creado por Álvaro Felipe de 
+	* Escuela Digital http://escueladigital.pe
+	* Esta es una primera versión (prototipo) que será mejorada 
+	* permanentemente. Use ED GRID libremente en sus proyectos. 
+	* Sus consejos y sugerencias serán bienvenidos. Escribanos 
+	* en http://facebook.com/escueladigitalperu o a 
+	* http://twitter.com/edigitalperu para reportar errores, 
+	* sugerencias o pedir soporte. Prometo responder =)
+	* En su html inserte primero ed-grid y luego ed-grid-custom 
+	* para que sus estilos personalizados se apliquen en el 
+	* orden correcto. Pronto crearé una página web solamente 
+	* para ed-grid con documentación detallada, casos de uso 
+	* y comentarios. Lo prometo =)
+*/
+
+
+
+/* Evitar que los paddings y bordes redimensionen las cajas*/
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+/* Reset basico*/
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* 	ESTILOS PARA DESARROLLO
+	========================
+	Añada la clase "desarrollo"
+   	a body para tener ayudas al trabajar con ED GRID 
+*/
+body.desarrollo {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+body.desarrollo:before{
+	background:  steelblue; /*Azul Escuela Digital*/	
+	display: block;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 36px;
+	margin-bottom: 30px;
+}
+
+.desarrollo .fila {
+	padding-top: 22px;
+	background: #fff;
+	margin-bottom: 10px;
+}
+.desarrollo .fila .fila {
+	margin-bottom: 0;
+	padding-bottom: 22px;
+}
+.desarrollo .fila > div,
+.desarrollo .fila > section{
+	background: #eee;
+	box-shadow: 0 0 0 1px steelblue inset;
+	position: relative;
+	padding-bottom: 22px;
+}
+
+.desarrollo .fila > div:after,
+.desarrollo .fila > section:after,
+.desarrollo .fila:after{
+	background: rgba(70, 130, 180,.3);
+	content: attr(class);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	display: table;
+	padding: 3px 5px;
+	font-style: italic;
+	font-size: 12px;
+	width: 100%;
+	color: #2A4E6C;
+	height: 16px;
+	line-height: 16px;
+	/*border: 1px solid seagreen;*/
+}
+.desarrollo .fila:after{
+	top: 0;
+	left: 0;
+	width: 100%;
+	border: 1px solid steelblue;
+	border-bottom: none;
+}
+.desarrollo .fila > div:nth-child(even),
+.desarrollo .fila > section:nth-child(even){
+	background: #ccc;
+}
+
+
+/*
+	filaS Y CAJAS
+	==============
+	Los filas son contenedores para las cajas.
+	Las cajas crean las divisiones verticales en el fila (columnas)
+*/
+.fila {
+	position: relative;
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.fila > div,
+.fila > section{
+/*	float: left; */
+	margin: 0;
+	width: 100%;
+	vertical-align:middle;
+	display: table-cell;
+}
+
+/*Si se quiere igualar alturas se le da al fila la clase tabla*/
+.fila.tabla > div,
+.fila.tabla > section {
+	display: table-cell;
+	float: none;
+
+}
+
+/*
+	ESTILOS DE LAYOUT
+	==================
+*/
+.centrar-caja{
+	display: block;
+	clear: both;
+	float: none !important;
+	margin: 0 auto !important;
+}
+
+.centrar-texto {
+	text-align: center;
+}
+
+.derecha-texto {
+	text-align: right;
+}
+
+.left,
+.izquierda {
+	float: left;
+}
+
+.right,
+.derecha {
+	float: right;
+}
+
+
+/* 	NO PADDING
+	===========
+	class="no-padding" al fila, le da padding cero a todas sus cajas.
+	class="no-padding" a la caja le da padding cero solo a ella
+*/
+.no-padding.fila > div,
+.no-padding.fila > section,
+.fila > .no-padding {
+	padding: 0 !important;
+}
+
+
+/* 
+	VISIBILIDAD DE ELEMENTOS
+	========================= 
+	Las siguientes clases aseguran la visibilidad solo dentro del 
+	rango indicado.
+*/
+
+.hasta-movil, 		/*por debajo de 480px*/
+.solo-movil,  		/*entre 480px y 767px*/
+.desde-movil, 		/*desde 480px en adelante*/
+.hasta-tablet, 		/*por debajo de 768px*/
+.solo-tablet,  		/*entre 768px y 1024px*/
+.desde-tablet,  	/*desde 768px en adelante*/
+.hasta-web,  		/*por debajo de 1024px*/
+.solo-web { 		/*desde 1024px en adelante*/
+	display: none;
+}
+
+
+
+/*==================================*
+ |			MEDIA QUERIES 			|
+ *==================================*/
+
+
+/*
+	POR DEBAJO DE MOVIL (menos de 480px)
+	====================================
+	Solo hay una columna
+*/
+
+@media (max-width: 479px){
+
+	.hasta-movil{
+		display: block;
+	}
+
+	/* Mensaje en modo desarrollo */
+	body.desarrollo:before{
+		content: "Debajo de 480px";
+	}
+
+}
+
+/*
+	DESDE MOVIL (a partir de 480px)
+	===============================
+*/
+
+@media (min-width: 480px) {
+
+	.desde-movil {
+		display: block;
+	}
+
+	/* Tercios */
+	.fila .movil-1-3	{ width: 33.3333% }
+	.fila .movil-2-3	{ width: 66.3337% }
+	.fila .movil-3-3	{ width: 100% }
+
+	/* Sextos */
+	.fila .movil-1-6	{ width: 16.6666% }
+	.fila .movil-2-6	{ width: 33.3333% }
+	.fila .movil-3-6	{ width: 50% }
+	.fila .movil-4-6	{ width: 66.3337% }
+	.fila .movil-5-6	{ width: 83.3333% }
+	.fila .movil-6-6	{ width: 100% }
+
+	/* Octavos */
+	.fila .movil-1-8	{ width: 12.5% }
+	.fila .movil-2-8	{ width: 25% }
+	.fila .movil-3-8	{ width: 37.5% }
+	.fila .movil-4-8	{ width: 50% }
+	.fila .movil-5-8	{ width: 62.5% }
+	.fila .movil-6-8	{ width: 75% }
+	.fila .movil-7-8	{ width: 87.5% }
+	.fila .movil-8-8	{ width: 100% }
+
+	/* Anchos por porcentaje */
+	.fila .movil-5		{ width: 5% }
+	.fila .movil-10	{ width: 10% }
+	.fila .movil-15	{ width: 15% }
+	.fila .movil-20	{ width: 20% }
+	.fila .movil-25	{ width: 25% }
+	.fila .movil-30	{ width: 30% }
+	.fila .movil-35	{ width: 35% }
+	.fila .movil-40	{ width: 40% }
+	.fila .movil-45	{ width: 45% }
+	.fila .movil-50	{ width: 50% }
+	.fila .movil-55	{ width: 55% }
+	.fila .movil-60	{ width: 60% }
+	.fila .movil-65	{ width: 65% }
+	.fila .movil-70	{ width: 70% }
+	.fila .movil-75	{ width: 75% }
+	.fila .movil-80	{ width: 80% }
+	.fila .movil-85	{ width: 85% }
+	.fila .movil-90	{ width: 90% }
+	.fila .movil-95	{ width: 95% }
+	.fila .movil-100	{ width: 100% }
+
+}
+
+/*
+	SOLO MOVIL (entre 480px y 767px)
+	=================================
+*/
+@media (min-width: 480px) and (max-width: 767px) {
+	
+	/* Mensajes en modo desarrollo */
+	body.desarrollo:before {
+		background:  #2A4E6C; /*Azul oscuro Escuela Digital*/
+		content: "MOVIL: entre 480px y 767px";
+	}
+
+	.solo-movil{
+		display: block;
+	}
+}
+
+/*
+	POR DEBAJO DE TABLET (menos de 768px)
+	======================================
+*/
+@media (max-width: 768px){
+	.hasta-tablet {
+		display: block;
+	}
+}
+
+
+/*
+	DESDE TABLET (desde 768px en adelante)
+	=======================================
+*/
+@media (min-width: 768px) {
+
+	.desde-tablet{
+		display: block;
+	}
+	
+	/* Tercios */
+	.fila .tablet-1-3	{ width: 33.3333% }
+	.fila .tablet-2-3	{ width: 66.3337% }
+	.fila .tablet-3-3	{ width: 100% }
+
+	/* Sextos */
+	.fila .tablet-1-6	{ width: 16.6666% }
+	.fila .tablet-2-6	{ width: 33.3333% }
+	.fila .tablet-3-6	{ width: 50% }
+	.fila .tablet-4-6	{ width: 66.3337% }
+	.fila .tablet-5-6	{ width: 83.3333% }
+	.fila .tablet-6-6	{ width: 100% }
+
+	/* Octavos */
+	.fila .tablet-1-8	{ width: 12.5% }
+	.fila .tablet-2-8	{ width: 25% }
+	.fila .tablet-3-8	{ width: 37.5% }
+	.fila .tablet-4-8	{ width: 50% }
+	.fila .tablet-5-8	{ width: 62.5% }
+	.fila .tablet-6-8	{ width: 75% }
+	.fila .tablet-7-8	{ width: 87.5% }
+	.fila .tablet-8-8	{ width: 100% }
+
+	/* Anchos por porcentaje */
+	.fila .tablet-5	{ width: 5% }
+	.fila .tablet-10	{ width: 10% }
+	.fila .tablet-15	{ width: 15% }
+	.fila .tablet-20	{ width: 20% }
+	.fila .tablet-25	{ width: 25% }
+	.fila .tablet-30	{ width: 30% }
+	.fila .tablet-35	{ width: 35% }
+	.fila .tablet-40	{ width: 40% }
+	.fila .tablet-45	{ width: 45% }
+	.fila .tablet-50	{ width: 50% }
+	.fila .tablet-55	{ width: 55% }
+	.fila .tablet-60	{ width: 60% }
+	.fila .tablet-65	{ width: 65% }
+	.fila .tablet-70	{ width: 70% }
+	.fila .tablet-75	{ width: 75% }
+	.fila .tablet-80	{ width: 80% }
+	.fila .tablet-85	{ width: 85% }
+	.fila .tablet-90	{ width: 90% }
+	.fila .tablet-95	{ width: 95% }
+	.fila .tablet-100	{ width: 100% }
+}
+
+
+/*
+	SOLO TABLET (entre 768px y 1024px)
+	===================================
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+	/* Mensaje para desarrollo */
+	body.desarrollo:before {
+		content: "TABLET: entre 768px y 1024px";
+	}
+
+	.solo-tablet{
+		display: block;
+	}
+	
+}
+
+/*
+	POR DEBAJO DE WEB (menos de 1024px)
+	====================================
+*/
+@media (max-width: 1024px){
+	.hasta-web{
+		display: block;
+	}
+}
+
+/*
+	WEB (de 1024px en adelante)
+	============================
+*/
+@media (min-width: 1025px) {
+
+	/*Mensaje en modo desarrollo*/
+	body.desarrollo:before{
+		background:  #2A4E6C; /*darkblue de paleta ED*/
+		content: "WEB: Desde 1025px en adelante";
+	}
+
+	.solo-web{
+		display: block;
+	}
+
+	/* Tercios */
+	.fila .web-1-3	{ width: 33.3333% }
+	.fila .web-2-3	{ width: 66.3337% }
+	.fila .web-3-3	{ width: 100% }
+
+	/* Sextos */
+	.fila .web-1-6	{ width: 16.6666% }
+	.fila .web-2-6	{ width: 33.3333% }
+	.fila .web-3-6	{ width: 50% }
+	.fila .web-4-6	{ width: 66.3337% }
+	.fila .web-5-6	{ width: 83.3333% }
+	.fila .web-6-6	{ width: 100% }
+
+	/* Octavos */
+	.fila .web-1-8	{ width: 12.5% }
+	.fila .web-2-8	{ width: 25% }
+	.fila .web-3-8	{ width: 37.5% }
+	.fila .web-4-8	{ width: 50% }
+	.fila .web-5-8	{ width: 62.5% }
+	.fila .web-6-8	{ width: 75% }
+	.fila .web-7-8	{ width: 87.5% }
+	.fila .web-8-8	{ width: 100% }
+
+	/* Anchos por porcentaje */
+	.fila .web-5	{ width: 5% }
+	.fila .web-10	{ width: 10% }
+	.fila .web-15	{ width: 15% }
+	.fila .web-20	{ width: 20% }
+	.fila .web-25	{ width: 25% }
+	.fila .web-30	{ width: 30% }
+	.fila .web-35	{ width: 35% }
+	.fila .web-40	{ width: 40% }
+	.fila .web-45	{ width: 45% }
+	.fila .web-50	{ width: 50% }
+	.fila .web-55	{ width: 55% }
+	.fila .web-60	{ width: 60% }
+	.fila .web-65	{ width: 65% }
+	.fila .web-70	{ width: 70% }
+	.fila .web-75	{ width: 75% }
+	.fila .web-80	{ width: 80% }
+	.fila .web-85	{ width: 85% }
+	.fila .web-90	{ width: 90% }
+	.fila .web-95	{ width: 95% }
+	.fila .web-100	{ width: 100% }
+}

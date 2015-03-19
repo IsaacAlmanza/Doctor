@@ -53,22 +53,11 @@ textarea,input[type="tel"]{
 
 /* =================================================*/
 
-*:after,
-*:before,
-* {
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	outline:0;
-}
-
-
+* {margin: 0;padding: 0;outline:0;}
 
 body {
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
-	margin:0;
-	padding: 0;
 }
 
 a {text-decoration: none;}
@@ -79,7 +68,6 @@ p {margin: 1em 0;}
 
 h2 {margin: 1.5em 0;}
 
-.post-container h2,.post-container p,figure,ul {margin: 0;}
 
 
 
@@ -103,38 +91,7 @@ color:#fff;
 
 .clearfix:after,.clearfix:before{content: "";display: table;}
 
-/*===============================================================*/
 
-/* -------------------- EFECTO DE REBOTE ---------------------*/
-
-@-webkit-keyframes bounce{
-	from,to{-webkit-transform:translate(0,0);}
-
-	50%{-webkit-transform:translate(0,5px);}
-}
-
-@-moz-keyframes bounce{
-	from,to{-moz-transform:translate(0,0);}
-	50%{-moz-transform:translate(0,5px)}
-}
-
-@keyframes bounce {
-	from,to{-webkit-transform:translate(0,0);
-	-moz-transform:translate(0,0);
-	-ms-transform:translate(0,0);
-	-o-transform:translate(0,0);
-	transform:translate(0,0)}
-	50%{-webkit-transform:translate(0,5px);
-	-moz-transform:translate(0,5px);
-	-ms-transform:translate(0,5px);
-	-o-transform:translate(0,5px);
-	transform:translate(0,5px);}
-
-}
-/* ======================================================*/
-
-
-/* ========================================================*/
 
 /* ====================== HEADER =====================*/
 
@@ -158,19 +115,92 @@ color:#fff;
 
 .container {z-index: 2;}
 
-.wrapper-titles {text-transform: uppercase;}
+.title-fade {display: inline-block;}
 
-.wrapper-titles h1 {
-	font:600 3.3em/1.2  'Open Sans',helvetica,sans-serif;;
-	letter-spacing: 0.28em;
-	margin: 5px 0;
+.title-fade p {
+	display: inline-block;
+  	font:600 3.8em/1.5  'Open Sans',helvetica,sans-serif;;
+  	text-transform: uppercase;
+  	position: relative;
+  	color: #fff;
+  	margin: 0 15px;
+	 float: left;
+	opacity: 0.0; 
+	 animation: port 7s 1 forwards;
+	 -webkit-animation: port 7s 1 forwards;
 }
+
+div p:nth-of-type(2){
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+div p:nth-of-type(3){
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+div p:nth-of-type(4){
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+div p:nth-of-type(5){
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+div p:nth-of-type(6){
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+div p:nth-of-type(7){
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+div p:nth-of-type(8){
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+div p:nth-of-type(9){
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+
+
+@keyframes port {
+  0%{
+    transform: rotateY(90deg) translateY(25%);
+    opacity: 0.0;
+  }
+  100%{
+    transform: rotateY(0deg) translateY(0%);
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes port {
+  0%{
+   -webkit-transform: rotateY(90deg) translateY(25%);
+    opacity: 0.0;
+  }
+  100%{
+    -webkit-transform: rotateY(0deg) translateY(0%);
+    opacity: 1.0;
+  }
+}
+
+
 
 .wrapper-titles h2 {
 	font-family: 'Open Sans',helvetica,sans-serif;
 	letter-spacing: 5px;
 	font-weight: 300;
-	margin: 0.83em;
+	margin: 0.73em;
 	font-size: 1.4em;
 }
 
@@ -595,17 +625,7 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 @media (max-width: 479px){
 
-
-
-}
-
-/*
-	DESDE MOVIL (a partir de 480px)
-	===============================
-*/
-
-@media (min-width: 480px) {
-
+	#portada { font-size: 8px; }	
 
 }
 
@@ -616,60 +636,6 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 */
 @media (max-width: 768px){
 	
-
-}
-
-
-/*
-	DESDE TABLET (desde 768px en adelante)
-	=======================================
-*/
-@media (min-width: 768px) {}
-
-
-
-
-/*
-	POR DEBAJO DE WEB (menos de 1024px)
-	====================================
-*/
-
-@media (max-width: 1024px){}
-
-
-/*
-	WEB (de 1024px en adelante)
-	============================
-*/
-@media (min-width: 1025px) {}
-
-
-
-/* ================= RESPONSIVE DESIGN =====================*/
-
-
-@media screen and (max-width: 1200px) {
-
-	body { font-size: 14px; }
-
-}
-
-
-@media screen and (max-width: 1000px) {
-
-	#portada, #bio, #servicios { font-size: 12px; }
-
-	#bio .wrapper-parrafo {font-size: 13px;}
-
-
-}
-
-
-@media screen and (max-width: 900px) {
-
-
-
-	/* ============ biografia ==================*/
 	.wrapper-img {width: 46%;}
 
 	.text {padding: 2% 3%;}
@@ -680,54 +646,25 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 	#bio, #servicios {font-size:11px; }
 
+}
 
+
+
+/*
+	POR DEBAJO DE WEB (menos de 1024px)
+	====================================
+*/
+
+@media (max-width: 1024px){
+
+	#portada, #bio, #servicios { font-size: 12px; }
+	#bio .wrapper-parrafo {font-size: 13px;}
+}
+
+
+@media (min-width: 1200px){
 	
+	#portada, #bio, #servicios { font-size: 16px; }
 
 }
-
-
-@media screen and (max-width: 790px) {
-
-		/* ------- biografia -------*/
-		.text {padding: 3% 6%;}
-
-		.caja {width: 85%;float: none;max-width: 600px;margin: 0 auto;}
-
-		.caja:first-child {margin: 0 auto;}
-		/* =======================================================*/
-
-		#site-links {display: none;}
-
-		#portada { font-size: 9px; }
-
-		.text {width: 100%;float: none;}
-
-		.wrapper-img {float: none;width: 100%;max-height: 400px;overflow: hidden;}
-
-		.wrapper-img img {max-height: 100%;}
-
-		
-	
-
-	/*==============================================*/
-}
-
-@media screen and (max-width: 570px) {
-
-	#portada { font-size: 8px; }	
-
-}
-
-
-@media screen and (max-width: 450px) {
-
-	#portada { font-size: 7px; }
-
-	
-
-}
-
-
-
-
 

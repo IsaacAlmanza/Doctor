@@ -6,8 +6,8 @@
 			var $elemento3 = $('span.icon-bar').last();
 			var inicio = 2;
 
-			var contenedor_bio = $('div.text');
-			var imagen_contenido = $('#wrapper-img');
+			var contenedor_bio = $('div.texto');
+			var imagen_contenido = $('.wrapper-img');
 			var portada = $('#portada');
 			var fondo = $('header.fondo');
 			var icon_bar = $('span.icon-bar');

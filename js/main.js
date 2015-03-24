@@ -15,10 +15,6 @@
 
 			
 			
-			//=============padding dinamico ========================*/
-			a = portada.height()/2*0.25;
-			fondo.css({'padding-top':(portada.height()/2+a)+'px','padding-bottom':portada.height()/2+'px'});
-
 			
 			imagen_contenido.height(contenedor_bio.outerHeight());
 			

@@ -148,7 +148,7 @@ html, body, .contenedor, .capa-fondo-azul {
 	min-height: 560px;
 	-webkit-user-select:none;
 	-moz-user-select:none;
-	-o-user-select:none;
+	-o-user-select:none;   
 }
 
 .capa-fondo-azul {background: rgba(67, 83, 199, 0.4);z-index: 1;}
@@ -163,6 +163,9 @@ html, body, .contenedor, .capa-fondo-azul {
 }
 
 .title-fade {display: inline-block;}
+
+.title-fade > h1 {display: block;width: 0px;height: 0px;overflow: hidden;}
+
 
 .title-fade p {
 	display: inline-block;
@@ -447,15 +450,15 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 
 
-#servicios {width: 100%;padding: 4% 0 10%;}
+#servicios {width: 100%;padding: 5% 0%;}
 
 #servicios .title:after {margin: 20px auto;background: #fff;}
 
-.grid {max-width: 1400px;width: 98%;margin: 0 auto;}
+.grid {max-width: 1400px;width: 98%;margin: 0 auto;display: flex;padding: 2% 0;}
 
 .grid a {
-	float: left;
-	max-width: 450px;
+
+	max-width: 400px;
 	width: 25%;
 	color: #333;
 }
@@ -565,15 +568,22 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 /*================ SECTION Our Sponsors & Partners ================================*/
 
 
-#partners {width: 100%;padding: 3% 0 10%;}
+#partners {width: 100%;padding: 5% 0 10%;}
 
-.outer-container {width: 85%;margin: 0 auto;padding-top: 1%}
+.outer-container {
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+     align-items: center;
+    -webkit-justify-content: center;
+      justify-content: center;
+}
 
-.item {max-width: 350px;display: table-cell;vertical-align: middle;float: none !important;}
+.item {max-width: 350px;}
 
-.item img {margin: 0 auto;display:block;}
-
-.item:first-child img {max-height: 200px;}
+.item:first-child {max-width: 250px;}
 
 
 /* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
@@ -655,10 +665,44 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 #Formulario textarea {height:200px;}
 
+
+
 /*==================================*
  |			MEDIA QUERIES 			|
  *==================================*/
 
+/*
+	POR DEBAJO DE WEB (menos de 1024px)
+	====================================
+*/
+
+@media (max-width: 1024px){
+
+	#portada, #bio, #servicios { font-size: 12px; }
+	
+	#bio .wrapper-parrafo {font-size: 13px;}
+
+	.grid a {width: 50%;}
+
+}
+
+
+
+
+/*
+	POR DEBAJO DE TABLET (menos de 768px)
+	======================================
+*/
+@media (max-width: 768px){
+
+
+	#portada { font-size: 10px; }
+
+	#bio, #servicios {font-size:11px; }
+
+
+
+}
 
 /*
 	POR DEBAJO DE MOVIL (menos de 480px)
@@ -670,42 +714,20 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 	#portada { font-size: 8px; }	
 
-}
+	.outer-container,.grid {
 
+		flex-direction:column;
+		-webkit-align-items: center;
+	     align-items: center;
+	     justify-content:center;
+ 	}
 
-/*
-	POR DEBAJO DE TABLET (menos de 768px)
-	======================================
-*/
-@media (max-width: 768px){
-	
-	.wrapper-img {width: 46%;}
-
-	.text {padding: 2% 3%;}
-
-	#portada { font-size: 10px; }
-
-	#bio, #servicios {font-size:11px; }
+	.grid a {width: 100%;}
 
 }
 
 
 
-/*
-	POR DEBAJO DE WEB (menos de 1024px)
-	====================================
-*/
-
-@media (max-width: 1024px){
-
-	#portada, #bio, #servicios { font-size: 12px; }
-	#bio .wrapper-parrafo {font-size: 13px;}
-}
 
 
-@media (min-width: 1200px){
-	
-	#portada, #bio, #servicios { font-size: 16px; }
-
-}
 

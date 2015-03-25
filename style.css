@@ -1,6 +1,6 @@
 
 
-/* --------------=============== GROBAL ==================--------------*/
+/* --------====== GROBAL ===------*/
 
 @font-face {
 	font-family: 'dido';
@@ -151,7 +151,11 @@ html, body, .contenedor, .capa-fondo-azul {
 	-o-user-select:none;   
 }
 
-.capa-fondo-azul {background: rgba(67, 83, 199, 0.4);z-index: 1;}
+.capa-fondo-azul {
+    background: rgba(67, 83, 199, 0.4);
+    z-index: 1;
+    width: 100%;
+}
 
 .titulo {
 	z-index: 2;
@@ -452,9 +456,24 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 #servicios {width: 100%;padding: 5% 0%;}
 
-#servicios .title:after {margin: 20px auto;background: #fff;}
+    #servicios .title:after {
+        margin: 20px auto;
+        background: #fff;
+    }
 
-.grid {max-width: 1400px;width: 98%;margin: 0 auto;display: flex;padding: 2% 0;}
+.grid {
+    max-width: 1400px;
+    width: 98%;
+    padding: 2% 0;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
 
 .grid a {
 
@@ -665,6 +684,13 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 #Formulario textarea {height:200px;}
 
+/* ====== pagina servicios ===== */
+
+#Content-Servicios {
+    width: 100%;
+    
+
+}
 
 
 /*==================================*
@@ -678,11 +704,10 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 @media (max-width: 1024px){
 
-	#portada, #bio, #servicios { font-size: 12px; }
-	
-	#bio .wrapper-parrafo {font-size: 13px;}
 
-	.grid a {width: 50%;}
+.outer-container,.grid {flex-wrap: wrap;}
+
+	  .items,.grid a {width: 50%;}
 
 }
 
@@ -696,10 +721,6 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 @media (max-width: 768px){
 
 
-	#portada { font-size: 10px; }
-
-	#bio, #servicios {font-size:11px; }
-
 
 
 }
@@ -712,14 +733,12 @@ nav {top: 3px;right: 0;z-index: 200000009;}
 
 @media (max-width: 479px){
 
-	#portada { font-size: 8px; }	
+	
 
-	.outer-container,.grid {
-
+	.outer-container,
+    .grid {
 		flex-direction:column;
-		-webkit-align-items: center;
-	     align-items: center;
-	     justify-content:center;
+		
  	}
 
 	.grid a {width: 100%;}

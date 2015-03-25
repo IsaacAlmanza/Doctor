@@ -9,7 +9,7 @@
 			var contenedor_bio = $('div.texto');
 			var imagen_contenido = $('.wrapper-img');
 			var portada = $('#portada');
-			var fondo = $('header.fondo');
+
 			var icon_bar = $('span.icon-bar');
 			var b = 0;
 
@@ -31,6 +31,7 @@
 						
 						$('#horario').slideToggle(800);
 					}) 
+                    
 					menu.click( function() {
 
 						$('#navigation').fadeToggle(400);
@@ -61,9 +62,9 @@
 						}
 
 
-					});// cierra evento de click
+                });// cierra evento de click
 			
-	});// cierra evento ready
+});// cierra evento ready
 	
 	
  

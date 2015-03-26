@@ -462,20 +462,21 @@ nav {top: 3px;right: 0;z-index: 99999;}
 
 .grid {
     max-width: 1400px;
-    width: 98%;
-    padding: 2% 0;
+    width: 85%;
     margin: 0 auto;
+    padding: 2% 0;
     
     display: flex;
+    display:-webkit-flex;
     flex-wrap: nowrap;
-    -webkit-align-items: center;
+    -webkit-flex-wrap: nowrap;
     align-items: center;
-    -webkit-justify-content: center;
+    -webkit-align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
 }
 
     .grid a {
-
         max-width: 400px;
         width: 25%;
         color: #333;
@@ -742,6 +743,8 @@ nav {top: 3px;right: 0;z-index: 99999;}
 	.outer-container,
     .grid {
 		flex-direction:column;
+        -webkit-flex-direction:column;
+        -ms-flex-direction:column;
  	}
 
 	   .grid a {width: 100%;}

@@ -151,6 +151,8 @@ h2 {margin: 1.5em 0;}
 				position:absolute;
 				height:100%;
         width: 100%;
+
+
     }
 
     .titulo {
@@ -595,17 +597,24 @@ nav {top: 3px;right: 0;z-index: 99999;}
 .outer-container {
 	width: 85%;
 	margin: 0 auto;
+	text-align:center;
 	display: flex;
 	display: -webkit-flex;
 	-webkit-align-items: center;
-     align-items: center;
-    -webkit-justify-content: center;
-      justify-content: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-    .item {max-width: 350px;}
+	.item {max-width: 350px;}
 
-    .item:first-child {max-width: 250px;}
+	.item:first-child {max-width: 200px;}
+
+	.item .button {
+            color: #fff;
+            border-radius: 10px;
+
+		}
 
 
 /* ========================= CONTENIDO DE PAGINA MEDICINA GENERAL ================*/
@@ -743,9 +752,8 @@ nav {top: 3px;right: 0;z-index: 99999;}
 
 @media (max-width: 479px){
 
-	.outer-container,
-    .grid {
-		flex-direction:column;
+	.outer-container,.grid {
+				flex-direction:column;
         -webkit-flex-direction:column;
         -ms-flex-direction:column;
  	}

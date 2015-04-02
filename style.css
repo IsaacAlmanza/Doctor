@@ -409,11 +409,12 @@ nav {top: 3px;right: 0;z-index: 99999;}
 #BotonHorario  img {
 	position: absolute;
 	top: 50%;left: 50%;
-	transform:translate(-50%,-50%) rotate(90deg);
+	-webkit-transform:translate(-50%,-50%) rotate(90deg);
+	        transform:translate(-50%,-50%) rotate(90deg);
 	transition:all 0.45s ease;
 }
 
-#BotonHorario:hover  img {transform-origin: 20% 40%;transform:rotate(180deg);}
+#BotonHorario:hover  img {-webkit-transform-origin: 20% 40%;transform-origin: 20% 40%;-webkit-transform:rotate(180deg);transform:rotate(180deg);}
 
 #LabelHorario span {
 	color:#fff;
@@ -424,7 +425,8 @@ nav {top: 3px;right: 0;z-index: 99999;}
 	position: absolute;
 	top: 50%;
 	left: 10%;
-	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	        transform:translateY(-50%);
 }
 
 
@@ -484,13 +486,17 @@ nav {top: 3px;right: 0;z-index: 99999;}
     margin: 0 auto;
     padding: 2% 0;
 
+    display: -ms-flexbox;
     display: flex;
     display:-webkit-flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-flex-wrap: nowrap;
-    align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
     -webkit-align-items: center;
-    justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     -webkit-justify-content: center;
 }
 
@@ -535,17 +541,18 @@ nav {top: 3px;right: 0;z-index: 99999;}
 	letter-spacing: 1px;
 	font-weight: 300;
 	font-size: 130%;
+	transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }
 .grid .servicio-info p {
 	padding: 0 20px;
 	color: #aaa;
 	font-weight: 300;
-	transition: opacity 0.3s, transform 0.3s;
+	transition: opacity 0.3s, -webkit-transform 0.3s;transition: opacity 0.3s, transform 0.3s;
 }
 .grid .servicio-info h2,
 .grid .servicio-info p {
-	transform: translateY(50px);
+	-webkit-transform: translateY(50px);transform: translateY(50px);
 }
 
 .grid .servicio-info button {
@@ -555,14 +562,15 @@ nav {top: 3px;right: 0;z-index: 99999;}
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
-	transition: opacity 0.3s, transform 0.3s;
+	transition: opacity 0.3s, -webkit-transform 0.3s;transition: opacity 0.3s, transform 0.3s;
 }
 
 .grid .servicio-info,
 .grid .servicio-info h2,
 .grid .servicio-info p,
 .grid .servicio-info button {
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 }
 
 .grid svg {
@@ -583,7 +591,8 @@ nav {top: 3px;right: 0;z-index: 99999;}
 
 .grid a:hover .servicio-info h2,
 .grid a:hover .servicio-info p {
-	transform: translateY(10%);
+	-webkit-transform: translateY(10%);
+	        transform: translateY(10%);
 }
 
 .grid a:hover .servicio-info p {
@@ -596,11 +605,13 @@ nav {top: 3px;right: 0;z-index: 99999;}
 	background: transparent;
 	color: #fff;
 	opacity: 0;
-	transform: translateY(-50%) translateX(-50%) scale(0.25);
+	-webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
+	        transform: translateY(-50%) translateX(-50%) scale(0.25);
 }
 .grid a:hover .servicio-info button {
 	opacity: 1;
-	transform: translateY(-50%) translateX(-50%) scale(1);
+	-webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+	        transform: translateY(-50%) translateX(-50%) scale(1);
 }
 /*================ SECTION Our Sponsors & Partners ================================*/
 
@@ -611,12 +622,15 @@ nav {top: 3px;right: 0;z-index: 99999;}
 	width: 85%;
 	margin: 0 auto;
 	text-align:center;
+	display: -ms-flexbox;
 	display: flex;
 	display: -webkit-flex;
 	-webkit-align-items: center;
-  align-items: center;
+  -ms-flex-align: center;
+	    align-items: center;
   -webkit-justify-content: center;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 	.item {max-width: 350px;}
@@ -738,7 +752,7 @@ nav {top: 3px;right: 0;z-index: 99999;}
 @media (max-width: 1024px){
 
 
-.outer-container,.grid {flex-wrap: wrap;}
+.outer-container,.grid {-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;}
 
 	  .items,.grid a {width: 50%;}
 
